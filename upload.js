@@ -223,7 +223,7 @@ Upload.prototype.validate = function(file) {
 
   if (options.acceptFileTypes && 
       !(options.acceptFileTypes.test(file.type) ||
-        options.acceptFileTypes.test(file.name))) {
+        options.acceptFileTypes.test(file.filename))) {
     this.error(options.messages.acceptFileTypes);
     return false;
   } else if (file.size > options.maxFileSize) {
